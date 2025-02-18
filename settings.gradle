@@ -1,0 +1,16 @@
+dependencyResolutionManagement {
+    repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)
+    repositories {
+        google()
+        mavenCentral()
+        maven {
+            url "https://flipplib.jfrog.io/flipplib/android-skit-local"
+            credentials {
+                username = "{{ FLIPP_PROVIDED_USERNAME }}"
+                password = "{{ FLIPP_PROIVDED_PASSWORD }}"
+            }
+        }
+    }
+}
+rootProject.name = "Skit2demo"
+include ':app'
